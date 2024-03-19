@@ -3,6 +3,9 @@
 
 #include "framework.h"
 #include "game.h"
+#include "..\\soursecode\CHApplication.h"
+//#pragma comment (lib, "..\\x64\\Debug\\sub1.lib")
+Application app;
 
 #define MAX_LOADSTRING 100
 
@@ -26,7 +29,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     UNREFERENCED_PARAMETER(lpCmdLine);
 
     // TODO: 여기에 코드를 입력합니다.
-
+    app.test();
     // 전역 문자열을 초기화합니다.
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
     LoadStringW(hInstance, IDC_GAME, szWindowClass, MAX_LOADSTRING);
@@ -43,13 +46,33 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     MSG msg;
 
     // 기본 메시지 루프입니다:
-    // 메시지큐(먼저 들어온놈 먼저 처리 wnproc함수)
-    while (GetMessage(&msg, nullptr, 0, 0))
+    // 메시지큐(먼저 들어온놈 먼저 처리 wnproc함수), 메시지큐에 아무것도 없다면 아무 메시지도 가져오지 않음
+    //while (GetMessage(&msg, nullptr, 0, 0))
+    //{
+    //    if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+    //    {
+    //        TranslateMessage(&msg);
+    //        DispatchMessage(&msg);
+    //    }
+    //}
+
+    //peekMessage: 메시지큐에 메시지 유무에 상관없이 함수가 리턴됨 //true 메시지 o ,false 메시지 x
+
+    while (true)
     {
-        if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+        if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
         {
-            TranslateMessage(&msg);
-            DispatchMessage(&msg);
+            if (msg.message == WM_QUIT)
+                break;
+            if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+            {
+                TranslateMessage(&msg);
+                DispatchMessage(&msg);
+            }
+        }
+        else
+        {
+            //메시지가 없을경우 (게임 로직이 돌아감)
         }
     }
 
@@ -164,7 +187,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             Ellipse(hdc, 200, 200, 400, 400); //원 만드는 함수
             //SelectObject(hdc, oldPen);
-           //DeleteObject(redPen);
+            //DeleteObject(redPen);
             // DC란 화면에 출력에 필요한 모든 정보를 가지는 데이터 구조체, GDI모듈에 의해 관리됨
             // ex) 글꼴 폰트 선의 굵기등등 
             // 화면 출력에 필요한 모든 경우는 WINAPI에서는 DC를 통해서 작업을 진행할 수 있다.
