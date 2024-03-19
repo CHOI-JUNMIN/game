@@ -43,7 +43,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     MSG msg;
 
     // 기본 메시지 루프입니다:
-    // 메시지큐(먼저들어온놈 먼저 처리
+    // 메시지큐(먼저 들어온놈 먼저 처리 wnproc함수)
     while (GetMessage(&msg, nullptr, 0, 0))
     {
         if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
@@ -147,6 +147,27 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         {
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
+            
+            HBRUSH brush = CreateSolidBrush(RGB(0, 0, 255)); //파랑 브러쉬 생성
+            
+            HBRUSH oldbrush = (HBRUSH)SelectObject(hdc, brush); //파랑 브러쉬 DC에 선택, 흰색 브러쉬 반환
+
+            Rectangle(hdc, 100, 100, 200, 200); //사각형 만드는 함수
+
+            SelectObject(hdc, oldbrush); //흰색 브러쉬 선택
+            DeleteObject(brush);  //파랑 삭제
+
+           
+
+            HPEN redPen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
+            HPEN oldPen = (HPEN)SelectObject(hdc, redPen);
+
+            Ellipse(hdc, 200, 200, 400, 400); //원 만드는 함수
+            //SelectObject(hdc, oldPen);
+           //DeleteObject(redPen);
+            // DC란 화면에 출력에 필요한 모든 정보를 가지는 데이터 구조체, GDI모듈에 의해 관리됨
+            // ex) 글꼴 폰트 선의 굵기등등 
+            // 화면 출력에 필요한 모든 경우는 WINAPI에서는 DC를 통해서 작업을 진행할 수 있다.
             // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
             EndPaint(hWnd, &ps);
         }
