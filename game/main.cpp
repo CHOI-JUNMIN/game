@@ -43,6 +43,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     MSG msg;
 
     // 기본 메시지 루프입니다:
+    // 메시지큐(먼저들어온놈 먼저 처리
     while (GetMessage(&msg, nullptr, 0, 0))
     {
         if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
@@ -69,7 +70,7 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
     wcex.cbSize = sizeof(WNDCLASSEX);
 
     wcex.style          = CS_HREDRAW | CS_VREDRAW;
-    wcex.lpfnWndProc    = WndProc;
+    wcex.lpfnWndProc    = WndProc;   //함수 포인터 안에 주소를 저장, 메시지가 들어오면 WndProc로 처리
     wcex.cbClsExtra     = 0;
     wcex.cbWndExtra     = 0;
     wcex.hInstance      = hInstance;
@@ -99,7 +100,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
-   //win 만드는 기본창 (앞)CW_USEDEFAULT, 0 창이 띄워지는 좌표, (뒤)CW_USEDEFAULT, 0 띠워지는 창의 크기
+   //win 만드는 기본창 (앞)CW_USEDEFAULT, 0 창이 띄워지는 좌표, (뒤)CW_USEDEFAULT, 0 띄워지는 창의 크기
    if (!hWnd)
    {
       return FALSE;
@@ -150,7 +151,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             EndPaint(hWnd, &ps);
         }
         break;
-    case WM_DESTROY:
+    case WM_DESTROY: //win창이 꺼질때 실행됨 이밖에 여러가지도 있음
         PostQuitMessage(0);
         break;
     default:
