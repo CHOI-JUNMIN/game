@@ -99,7 +99,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
-   //ㅈㄷㄹㄷ저ㅡ대헏개ㅑ헏ㄱ허ㅑ갣허ㅐㄷ갸ㅓ해ㅑㄷ거해ㅑㄷ거
+   //win 만드는 기본창 (앞)CW_USEDEFAULT, 0 창이 띄워지는 좌표, (뒤)CW_USEDEFAULT, 0 띠워지는 창의 크기
    if (!hWnd)
    {
       return FALSE;
