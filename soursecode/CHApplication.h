@@ -1,5 +1,6 @@
 #pragma once
 #include "Commoninclude.h"
+#include "Gameobject.h"
 namespace me
 {
 
@@ -19,9 +20,6 @@ namespace me
 	private:
 		HWND mHwnd;
 		HDC mHdc;
-
-		float mspeed;
-		float mX;
-		float mY;
+		Gameobject mPlayer;
 	};
 }

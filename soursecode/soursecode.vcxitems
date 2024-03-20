@@ -16,8 +16,10 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CHApplication.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Commoninclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Gameobject.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)CHApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Gameobject.cpp" />
   </ItemGroup>
 </Project>
