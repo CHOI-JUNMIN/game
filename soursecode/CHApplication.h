@@ -3,8 +3,6 @@
 #include "Gameobject.h"
 namespace me
 {
-
-
 	class Application
 	{
 	public:
