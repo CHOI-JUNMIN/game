@@ -1,5 +1,4 @@
 #pragma once
-#include "Commoninclude.h"
 #include "Gameobject.h"
 namespace me
 {
@@ -8,8 +7,8 @@ namespace me
 	public:
 		Application();
 		~Application();
-
-		void Initialize(HWND mHwnd);
+		
+		void Initialize(HWND hwnd, UINT width, UINT height);
 		void Run();
 		void update();
 		void Lateupdate();
@@ -18,6 +17,13 @@ namespace me
 	private:
 		HWND mHwnd;
 		HDC mHdc;
+
+		HDC mBackHdc;
+		HBITMAP mBackBitmap;
+		
+		UINT mWidth;
+		UINT mHeight;
+
 		Gameobject mPlayer;
 	};
 }

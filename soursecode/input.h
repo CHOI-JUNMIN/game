@@ -31,13 +31,12 @@ namespace me
 
 		static void Initailize();
 		static void Update();
-
+		static void fun1();
 		static bool GetKeyDown(eKeyCode code) { return mKeys[(UINT)code].state == eKeyState::Down; }
 		static bool GetKeyUp(eKeyCode code) { return mKeys[(UINT)code].state == eKeyState::Up; }
 		static bool GetKey(eKeyCode code) { return mKeys[(UINT)code].state == eKeyState::Pressed; }
 
 	private:
-		//eKeyState mState[] = eKeyState::Up;
 		static std::vector<Key> mKeys;
 	};
 }

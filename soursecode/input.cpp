@@ -14,6 +14,11 @@ namespace me
 
 	void Input::Initailize()
 	{
+		fun1();
+	}
+
+	void Input::fun1()
+	{
 		for (size_t i = 0; i < (UINT)eKeyCode::End; i++)
 		{
 			Key key = {};
@@ -23,7 +28,7 @@ namespace me
 
 			mKeys.push_back(key);
 		}
-	}
+	} 
 
 	void Input::Update()
 	{
