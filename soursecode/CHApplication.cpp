@@ -1,6 +1,7 @@
 #include "CHApplication.h"
 #include "input.h"
 #include "Time.h"
+#include "SceneManager.h"
 namespace me
 {
 	Application::Application()
@@ -30,10 +31,12 @@ namespace me
 
 		HBITMAP oldBitmap = (HBITMAP)SelectObject(mBackHdc, mBackBitmap);
 		DeleteObject(oldBitmap);
-		mPlayer.SetPosition(0, 0);
 
 		Input::Initailize();
 		Time::Initailize();
+		
+		SceneManager::Initialize();
+
 	}
 	void Application::Run()
 	{
@@ -45,7 +48,7 @@ namespace me
 	{
 		Input::Update();
 		Time::Update();
-		mPlayer.update();
+		SceneManager::update();
 	}
 	void Application::Lateupdate()
 	{
@@ -53,12 +56,20 @@ namespace me
 	}
 	void Application::Render()
 	{
-		Rectangle(mBackHdc, 0, 0, 1600, 900);
+
+		clearRenderTarget();
 
 		Time::Render(mBackHdc);
-		mPlayer.Render(mBackHdc);
-
-		BitBlt(mHdc, 0, 0, mWidth, mHeight, mBackHdc, 0, 0, SRCCOPY);  //BackBuffer에 있는걸 원본 Buffer에 복사 
+		SceneManager::Render(mBackHdc);
+		copyRenderTarget(mBackHdc, mHdc);
+	}
+	void Application::clearRenderTarget()
+	{
+		Rectangle(mBackHdc, -1, -1, 1601, 901);
+	}
+	void Application::copyRenderTarget(HDC source, HDC dest)
+	{
+		BitBlt(dest, 0, 0, mWidth, mHeight, source, 0, 0, SRCCOPY);
 	}
 }
 

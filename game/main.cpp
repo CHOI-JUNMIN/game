@@ -3,7 +3,8 @@
 
 #include "framework.h"
 #include "game.h"
-#include "..\\soursecode\CHApplication.h"
+#include "..//soursecode/CHApplication.h"
+#include "..//sub1/LoadScenes.h"
 //#pragma comment (lib, "..\\x64\\Debug\\sub1.lib")
 me::Application application;
 
@@ -136,6 +137,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 	ShowWindow(hWnd, nCmdShow);
 	UpdateWindow(hWnd);
 
+	//load Scenes
+	me::LoadScenes();
 	return TRUE;
 }
 

@@ -24,6 +24,10 @@ namespace me
 		UINT mWidth;
 		UINT mHeight;
 
-		Gameobject mPlayer;
+		//std::vector<Scene*> mScenes;
+
+		void clearRenderTarget();
+		void copyRenderTarget(HDC source,HDC dest);
+
 	};
 }
