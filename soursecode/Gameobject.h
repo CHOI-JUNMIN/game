@@ -1,5 +1,7 @@
 #pragma once
 #include "Commoninclude.h"
+#include "Component.h"
+
 namespace me
 {
 	class Gameobject
@@ -8,19 +10,34 @@ namespace me
 		Gameobject();
 		~Gameobject();
 
-		void update();
-		void Lateupdate();
-		void Render(HDC hdc);
+		virtual void update();
+		virtual void Lateupdate();
+		virtual void Render(HDC hdc);
+		virtual void Initialize();
 
-		void SetPosition(float x, float y)
+		template <typename T>
+		T* AddComponent()
 		{
-			mX = x;
-			mY = y;
+			T* comp = new T();
+			comp->SetOwner(this);
+			mComponents.push_back(comp);
+			return comp;
 		}
-		float GetPositionX(){	return mX;	}
-		float GetPositionY(){	return mY;	}
-	private:
-		float mX;
-		float mY;
+
+		template <typename T>
+		T* GetComponent()
+		{
+			T* component = nullptr;
+			for (Component* comp : mComponents)
+			{
+				component = dynamic_cast<T*>(comp);
+				if (component)
+					break;
+			}
+			return component;
+		}
+
+		private:
+			std::vector<Component*> mComponents;
 	};
 }

@@ -19,4 +19,3 @@ namespace me
 		std::vector<Gameobject*> mGameobjects;
 	};
 }
-

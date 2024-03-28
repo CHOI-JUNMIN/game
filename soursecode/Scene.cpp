@@ -13,10 +13,6 @@ namespace me
 	}
 	void Scene::update()
 	{
-		//for (size_t i = 0; i < mGameobjects.size(); i++)
-		//{
-		//	mGameobjects[i]->update();
-		//}
 		//범위 기반 for문
 		for (Gameobject* gameobj : mGameobjects)
 		{

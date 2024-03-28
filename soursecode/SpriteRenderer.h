@@ -1,19 +1,20 @@
 #pragma once
-#include "..//soursecode/Scene.h"
+#include "Entity.h"
+#include "Component.h"
 
-namespace me 
+namespace me
 {
-	class PlayScene : public Scene
+	class SpriteRenderer : public Component
 	{
 	public:
-		PlayScene();
-		~PlayScene();
+		SpriteRenderer();
+		~SpriteRenderer();
+
 		void Initialize() override;
 		void update() override;
 		void Lateupdate() override;
 		void Render(HDC hdc) override;
 
 	private:
-
 	};
 }

@@ -1,19 +1,17 @@
 #pragma once
-#include "..//soursecode/Scene.h"
+#include "..//soursecode/Gameobject.h"
 
-namespace me 
+namespace me
 {
-	class PlayScene : public Scene
+	class Player : public Gameobject
 	{
 	public:
-		PlayScene();
-		~PlayScene();
+
 		void Initialize() override;
 		void update() override;
 		void Lateupdate() override;
 		void Render(HDC hdc) override;
-
+	
 	private:
-
 	};
 }

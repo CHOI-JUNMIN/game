@@ -25,5 +25,4 @@ namespace me {
 	{
 		mActiveScene->Render(hdc);
 	}
-
 }
