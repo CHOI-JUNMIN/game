@@ -2,8 +2,9 @@
 #include "Gameobject.h"
 #include "Transform.h"
 #include "Texture.h"
+#include "Renderer.h"
 me::SpriteRenderer::SpriteRenderer()
-	:Component(), mTexture(nullptr),mSize(Vector2::One)
+	:Component(enums::eComponentType::SpriteRenderer), mTexture(nullptr),mSize(Vector2::One)
 {
 	
 }
@@ -31,6 +32,7 @@ void me::SpriteRenderer::Render(HDC hdc)
 
 	Transform* tr = GetOwner()->GetComponent<Transform>();
 	Vector2 pos = tr->Getposition();
+	pos = renderer::mainCamera->CaluatePosition(pos);
 
 	if (mTexture->GetTextureType()
 		== graphcis::Texture::eTextureType::Bmp)

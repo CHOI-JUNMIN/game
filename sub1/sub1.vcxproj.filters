@@ -13,10 +13,12 @@
     <ClInclude Include="Player.h" />
     <ClInclude Include="TitleScene.h" />
     <ClInclude Include="LoadResources.h" />
+    <ClInclude Include="PlayerScript.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PlayScene.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="TitleScene.cpp" />
+    <ClCompile Include="PlayerScript.cpp" />
   </ItemGroup>
 </Project>

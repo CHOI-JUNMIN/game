@@ -6,6 +6,7 @@ namespace me
 {
 	Gameobject::Gameobject()
 	{
+		mComponents.resize((UINT)enums::eComponentType::End);
 		initializeAddTransform();
 	}
 	Gameobject::~Gameobject()
@@ -21,6 +22,8 @@ namespace me
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+				continue;
 			comp->Initialize();
 		}
 	}
@@ -28,6 +31,8 @@ namespace me
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+				continue;
 			comp->update();
 		}
 	}
@@ -35,6 +40,8 @@ namespace me
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+				continue;
 			comp->Lateupdate();
 		}
 	}
@@ -42,6 +49,8 @@ namespace me
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+				continue;
 			comp->Render(hdc);
 		}
 	}

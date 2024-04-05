@@ -1,6 +1,7 @@
 #include "Transform.h"
 
 me::Transform::Transform()
+	:Component(enums::eComponentType::Transform)
 {
 }
 
