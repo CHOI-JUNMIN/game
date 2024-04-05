@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Scenes">
+      <UniqueIdentifier>{1becbe70-64bd-4eb8-af91-5f7e251617b3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LoadScenes.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayScene.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="TitleScene.h" />
+    <ClInclude Include="LoadResources.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PlayScene.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="TitleScene.cpp" />
+  </ItemGroup>
+</Project>
