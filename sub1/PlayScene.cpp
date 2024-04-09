@@ -25,26 +25,35 @@ namespace me
 	{
 		{
 
-			Gameobject* camera = object::Instantiate<Gameobject>(enums::eLayerType::None, Vector2(344.0f, 442.0f));
+			Gameobject* camera = object::Instantiate<Gameobject>(enums::eLayerType::Particle, Vector2(344.0f, 442.0f));
 			Camera* cameraComp = camera->AddComponent<Camera>();
 			renderer::mainCamera = cameraComp;
 
-			mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
+			mPlayer = object::Instantiate<Player>(enums::eLayerType::Particle);
 			//SpriteRenderer* sr = mPlayer->AddComponent<SpriteRenderer>();
 			//sr->SetSize(Vector2(3.0f, 3.0f));
 			mPlayer->AddComponent<PlayerScript>();
 
 			graphcis::Texture* packmanTexture = Resources::Find<graphcis::Texture>(L"Cat");
 			Animator* animator = mPlayer->AddComponent < Animator>();
-			animator->CreateAnimation(L"CatFrontMove", packmanTexture, Vector2(0.0f, 0.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.5f);
-			animator->PlayAnimation(L"CatFrontMove", true);
+			animator->CreateAnimation(L"DownWalk", packmanTexture, Vector2(0.0f, 0.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+			animator->CreateAnimation(L"RightWalk", packmanTexture, Vector2(0.0f, 32.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+			animator->CreateAnimation(L"UpWalk", packmanTexture, Vector2(0.0f, 64.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+			animator->CreateAnimation(L"LeftWalk", packmanTexture, Vector2(0.0f, 96.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+			animator->CreateAnimation(L"SitDown", packmanTexture, Vector2(0.0f, 128.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+			animator->CreateAnimation(L"Grooming", packmanTexture, Vector2(0.0f, 160.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+			
+			animator->PlayAnimation(L"SitDown", false);
+
+			mPlayer->GetComponent<Transform>()->SetPosition(Vector2(100.f, 100.f));
+			mPlayer->GetComponent<Transform>()->SetScale(Vector2(2.0f, 2.0f));
 			//sr->SetTexture(packmanTexture);
 
-			Gameobject* bg = object::Instantiate<Gameobject>(enums::eLayerType::BackGround);
+			Gameobject* bg = object::Instantiate<Gameobject>(enums::eLayerType::Player);
 			SpriteRenderer* bgSr = bg->AddComponent<SpriteRenderer>();
-			bgSr->SetSize(Vector2(3.0f, 3.0f));
+			//bgSr->SetSize(Vector2(3.0f, 3.0f));
 
-			graphcis::Texture* bgTexture = Resources::Find<graphcis::Texture>(L"Map");
+			graphcis::Texture* bgTexture = Resources::Find<graphcis::Texture>(L"Bubble");
 			bgSr->SetTexture(bgTexture);
 			Scene::Initialize();
 		}

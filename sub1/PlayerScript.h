@@ -7,6 +7,13 @@ namespace me
 	class PlayerScript : public Script
 	{
 	public:
+		enum class eState
+		{
+			SitDown,
+			Walk,
+			Sleep,
+			Attack,
+		};
 		PlayerScript();
 		~PlayerScript();
 
@@ -15,6 +22,10 @@ namespace me
 		void Lateupdate() override;
 		void Render(HDC hdc) override;
 	private:
-
+		void sitDown();
+		void move();
+	private:
+		eState mState;
+		class  Animator* mAnimator;
 	};
 }

@@ -19,6 +19,7 @@ namespace me :: enums
 		None,
 		BackGround,
 		Player,
+		Particle,
 		Max=16,
 	};
 	enum class eResourceType
