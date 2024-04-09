@@ -12,6 +12,5 @@ namespace me
 		void update() override;
 		void Lateupdate() override;
 		void Render(HDC hdc) override;
-	private:
 	};
 }

@@ -41,10 +41,15 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Script.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Renderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Camera.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Animator.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Animation.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CHApplication.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Enums.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Gameobject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)input.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Layer.h" />
@@ -72,7 +77,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Time.h">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Object.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Texture.h">
       <Filter>Resourse</Filter>
     </ClInclude>
@@ -88,6 +92,18 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Script.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Renderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Camera.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Enums.h">
+      <Filter>onlyheader</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Object.h">
+      <Filter>onlyheader</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Animator.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Animation.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Resourse">
@@ -101,6 +117,12 @@
     </Filter>
     <Filter Include="component">
       <UniqueIdentifier>{57eac756-b17e-4062-b7a5-6d0c8566a0d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="onlyheader">
+      <UniqueIdentifier>{2c0faca7-abf1-493b-a650-c49564b7d280}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Animation">
+      <UniqueIdentifier>{9396ea64-bb4d-4878-965a-42d7b2874b4c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

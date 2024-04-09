@@ -1,6 +1,6 @@
 #pragma once
 #include "Commoninclude.h"
-
+using namespace me::math;
 namespace me {
 	class Entity
 	{
