@@ -10,6 +10,13 @@ namespace me
 
 	Layer::~Layer()
 	{
+		for (Gameobject* gameObj : mGameobject)
+		{
+			if (gameObj == nullptr)
+				continue;
+			delete gameObj;
+			gameObj = nullptr;
+		}
 	}
 
 	void Layer::Initialize()

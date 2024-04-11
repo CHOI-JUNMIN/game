@@ -32,20 +32,21 @@ namespace me
 			renderer::mainCamera = cameraComp;
 
 			mPlayer = object::Instantiate<Player>(enums::eLayerType::Particle);
-			mPlayer->AddComponent<PlayerScript>();
+			PlayerScript* plScript = mPlayer->AddComponent<PlayerScript>();
 
 			graphcis::Texture* playerTex = Resources::Find<graphcis::Texture>(L"Player");
 			Animator* playerAnimator = mPlayer->AddComponent<Animator>();
 			playerAnimator->CreateAnimation(L"Idle",playerTex,Vector2(2000.0f, 250.0f), Vector2(250.0f, 250.0f), Vector2::Zero, 1, 0.1f);
 			playerAnimator->CreateAnimation(L"FrontGiveWater", playerTex, Vector2(0.0f, 2000.0f), Vector2(250.0f, 250.0f), Vector2::Zero, 12, 0.1f);
 			playerAnimator->PlayAnimation(L"Idle",false);
-
+			playerAnimator->GetCompleteEvent(L"FrontGiveWater") = std::bind(&PlayerScript::AttackEffect, plScript);
 			mPlayer->GetComponent<Transform>()->SetPosition(Vector2(100.f, 100.f));
 			//mPlayer->GetComponent<Transform>()->SetScale(Vector2(2.0f, 2.0f));
 
 
 			Cat* cat = object::Instantiate<Cat>(enums::eLayerType::Animal);
 			cat->AddComponent<CatScript>();
+			cameraComp->SetTarget(cat);
 			graphcis::Texture* catTex = Resources::Find<graphcis::Texture>(L"Cat");
 			Animator* CatAnimator = cat->AddComponent < Animator>();
 			CatAnimator->CreateAnimation(L"DownWalk", catTex, Vector2(0.0f, 0.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);

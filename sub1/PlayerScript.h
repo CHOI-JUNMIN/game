@@ -22,6 +22,8 @@ namespace me
 		void update() override;
 		void Lateupdate() override;
 		void Render(HDC hdc) override;
+
+		void AttackEffect();
 	private:
 		void idle();
 		void move();

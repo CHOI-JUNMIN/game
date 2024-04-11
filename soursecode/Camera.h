@@ -17,6 +17,8 @@ namespace me
 		void Lateupdate() override;
 		void Render(HDC hdc) override;
 
+		void SetTarget(Gameobject* target) { mTarget = target; };
+
 	private:
 		class Gameobject* mTarget;
 		Vector2 mDistance;
