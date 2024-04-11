@@ -13,6 +13,7 @@ namespace me
 		void update();
 		void Lateupdate();
 		void Render();
+		HWND GetHwnd() { return mHwnd; }
 		HDC GetHdc() { return mHdc; }
 		UINT GetWidth() { return mWidth; }
 		UINT GetHeight() { return mHeight; }

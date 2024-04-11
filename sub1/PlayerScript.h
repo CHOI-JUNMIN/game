@@ -9,9 +9,10 @@ namespace me
 	public:
 		enum class eState
 		{
-			SitDown,
+			Idle,
 			Walk,
 			Sleep,
+			GiveWater,
 			Attack,
 		};
 		PlayerScript();
@@ -22,8 +23,9 @@ namespace me
 		void Lateupdate() override;
 		void Render(HDC hdc) override;
 	private:
-		void sitDown();
+		void idle();
 		void move();
+		void giveWater();
 	private:
 		eState mState;
 		class  Animator* mAnimator;

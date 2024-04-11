@@ -6,11 +6,7 @@ namespace me
 {
 	void LoadResources()
 	{
-		Resources::Load<graphcis::Texture>(L"Map", L"..//Resource/img/map/map_pure.png");
-		Resources::Load<graphcis::Texture>(L"PackMan", L"..//Resource/img/pacman/0.png");
-		Resources::Load<graphcis::Texture>(L"Chicken", L"..//Resource/chicken.bmp");
+		Resources::Load<graphcis::Texture>(L"Player", L"..//Resource/Player.bmp");
 		Resources::Load<graphcis::Texture>(L"Cat", L"..//Resource/ChickenAlpha.bmp");
-		Resources::Load<graphcis::Texture>(L"Bubble", L"..//Resource/Bubble.png");
-		Resources::Load<graphcis::Texture>(L"MapleEffect", L"..//Resource/ezgif.com-gif-maker.png");
 	}
 }

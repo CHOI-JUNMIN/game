@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <string>
 #include <map>
+#include <functional>
 
 #include "mMath.h"
 #include <dinput.h>

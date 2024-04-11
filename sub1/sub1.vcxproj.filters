@@ -7,29 +7,56 @@
     <Filter Include="player">
       <UniqueIdentifier>{a861843f-83c8-4904-b492-46e8c70f783f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Script">
+      <UniqueIdentifier>{2b8493a1-dc92-42d4-a9c3-aded08d3003f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LoadScenes.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="PlayScene.h" />
-    <ClInclude Include="TitleScene.h" />
     <ClInclude Include="LoadResources.h" />
     <ClInclude Include="Player.h">
       <Filter>player</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="PlayScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
     <ClInclude Include="PlayerScript.h">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="CatScript.h">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="Cat.h">
       <Filter>player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="PlayScene.cpp" />
-    <ClCompile Include="TitleScene.cpp" />
     <ClCompile Include="Player.cpp">
       <Filter>player</Filter>
     </ClCompile>
+    <ClCompile Include="PlayScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
     <ClCompile Include="PlayerScript.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
+    <ClCompile Include="CatScript.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
+    <ClCompile Include="Cat.cpp">
       <Filter>player</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="sub1.rc" />
   </ItemGroup>
 </Project>
