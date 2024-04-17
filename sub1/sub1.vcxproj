@@ -19,23 +19,23 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Cat.h" />
-    <ClInclude Include="CatScript.h" />
-    <ClInclude Include="LoadResources.h" />
-    <ClInclude Include="LoadScenes.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="PlayerScript.h" />
-    <ClInclude Include="PlayScene.h" />
+    <ClInclude Include="meCat.h" />
+    <ClInclude Include="meCatScript.h" />
+    <ClInclude Include="meLoadResources.h" />
+    <ClInclude Include="meLoadScenes.h" />
+    <ClInclude Include="mePlayer.h" />
+    <ClInclude Include="mePlayerScript.h" />
+    <ClInclude Include="mePlayScene.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="TitleScene.h" />
+    <ClInclude Include="meTitleScene.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Cat.cpp" />
-    <ClCompile Include="CatScript.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="PlayerScript.cpp" />
-    <ClCompile Include="PlayScene.cpp" />
-    <ClCompile Include="TitleScene.cpp" />
+    <ClCompile Include="meCat.cpp" />
+    <ClCompile Include="meCatScript.cpp" />
+    <ClCompile Include="mePlayer.cpp" />
+    <ClCompile Include="mePlayerScript.cpp" />
+    <ClCompile Include="mePlayScene.cpp" />
+    <ClCompile Include="meTitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="sub1.rc" />

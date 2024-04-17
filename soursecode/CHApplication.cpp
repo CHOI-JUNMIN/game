@@ -1,8 +1,8 @@
 #include "CHApplication.h"
-#include "input.h"
-#include "Time.h"
-#include "SceneManager.h"
-#include "Resources.h"
+#include "meinput.h"
+#include "meTime.h"
+#include "meSceneManager.h"
+#include "meResources.h"
 namespace me
 {
 	Application::Application()
@@ -44,6 +44,7 @@ namespace me
 		update();
 		Lateupdate();
 		Render();
+		Destroy();
 	}
 	void Application::update()
 	{
@@ -63,6 +64,10 @@ namespace me
 		Time::Render(mBackHdc);
 		SceneManager::Render(mBackHdc);
 		copyRenderTarget(mBackHdc, mHdc);
+	}
+	void Application::Destroy()
+	{
+		SceneManager::Destroy();
 	}
 	void Application::Release()
 	{

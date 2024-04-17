@@ -12,47 +12,47 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LoadScenes.h">
+    <ClInclude Include="meLoadScenes.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="LoadResources.h" />
-    <ClInclude Include="Player.h">
+    <ClInclude Include="meLoadResources.h" />
+    <ClInclude Include="mePlayer.h">
       <Filter>player</Filter>
     </ClInclude>
     <ClInclude Include="resource.h" />
-    <ClInclude Include="PlayScene.h">
+    <ClInclude Include="mePlayScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="TitleScene.h">
+    <ClInclude Include="meTitleScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerScript.h">
+    <ClInclude Include="mePlayerScript.h">
       <Filter>Script</Filter>
     </ClInclude>
-    <ClInclude Include="CatScript.h">
+    <ClInclude Include="meCatScript.h">
       <Filter>Script</Filter>
     </ClInclude>
-    <ClInclude Include="Cat.h">
+    <ClInclude Include="meCat.h">
       <Filter>player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Player.cpp">
+    <ClCompile Include="mePlayer.cpp">
       <Filter>player</Filter>
     </ClCompile>
-    <ClCompile Include="PlayScene.cpp">
+    <ClCompile Include="mePlayScene.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="TitleScene.cpp">
+    <ClCompile Include="meTitleScene.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerScript.cpp">
+    <ClCompile Include="mePlayerScript.cpp">
       <Filter>Script</Filter>
     </ClCompile>
-    <ClCompile Include="CatScript.cpp">
+    <ClCompile Include="meCatScript.cpp">
       <Filter>Script</Filter>
     </ClCompile>
-    <ClCompile Include="Cat.cpp">
+    <ClCompile Include="meCat.cpp">
       <Filter>player</Filter>
     </ClCompile>
   </ItemGroup>

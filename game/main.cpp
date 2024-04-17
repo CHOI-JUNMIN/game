@@ -4,9 +4,9 @@
 #include "framework.h"
 #include "game.h"
 #include "..//soursecode/CHApplication.h"
-#include "..//sub1/LoadScenes.h"
-#include "../sub1/LoadResources.h"
-//#pragma comment (lib, "..\\x64\\Debug\\sub1.lib")
+#include "..//sub1/meLoadScenes.h"
+#include "../sub1/meLoadResources.h"
+
 me::Application application;
 
 ULONG_PTR gpToken;

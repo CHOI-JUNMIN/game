@@ -1,5 +1,5 @@
 #pragma once
-#include "Gameobject.h"
+#include "meGameobject.h"
 namespace me
 {
 	class Application
@@ -13,6 +13,7 @@ namespace me
 		void update();
 		void Lateupdate();
 		void Render();
+		void Destroy();
 		void Release();
 
 		HWND GetHwnd() { return mHwnd; }

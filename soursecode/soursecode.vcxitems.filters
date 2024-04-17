@@ -2,106 +2,106 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)CHApplication.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Gameobject.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)input.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Layer.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Resource.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)meGameobject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)meinput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)meLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)meResource.cpp">
       <Filter>Resourse</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Resources.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)meResources.cpp">
       <Filter>Resourse</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)mMath.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)meMath.cpp">
       <Filter>common</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Entity.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)meEntity.cpp">
       <Filter>common</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Scene.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)meScene.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)SceneManager.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)meSceneManager.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Time.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)meTime.cpp">
       <Filter>common</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Texture.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)meTexture.cpp">
       <Filter>Resourse</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Component.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)meComponent.cpp">
       <Filter>component</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Transform.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)meTransform.cpp">
       <Filter>component</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)SpriteRenderer.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)meSpriteRenderer.cpp">
       <Filter>component</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Script.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Renderer.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Camera.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Animator.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)meScript.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)meRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)meCamera.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)meAnimator.cpp">
       <Filter>Animation</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Animation.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)meAnimation.cpp">
       <Filter>Animation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CHApplication.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Gameobject.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)input.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Layer.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Resource.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)meGameobject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)meinput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)meLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)meResource.h">
       <Filter>Resourse</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Resources.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)meResources.h">
       <Filter>Resourse</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Commoninclude.h">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)mMath.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)meMath.h">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Entity.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)meEntity.h">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Scene.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)meScene.h">
       <Filter>Scene</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)SceneManager.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)meSceneManager.h">
       <Filter>Scene</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Time.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)meTime.h">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Texture.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)meTexture.h">
       <Filter>Resourse</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Component.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)meComponent.h">
       <Filter>component</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Transform.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)meTransform.h">
       <Filter>component</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)SpriteRenderer.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)meSpriteRenderer.h">
       <Filter>component</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Script.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Renderer.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Camera.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Enums.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)meScript.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)meRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)meCamera.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)meEnums.h">
       <Filter>onlyheader</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Object.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)meObject.h">
       <Filter>onlyheader</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Animator.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)meAnimator.h">
       <Filter>Animation</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Animation.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)meAnimation.h">
       <Filter>Animation</Filter>
     </ClInclude>
   </ItemGroup>
