@@ -40,30 +40,30 @@ namespace me
 			playerAnimator->CreateAnimation(L"FrontGiveWater", playerTex, Vector2(0.0f, 2000.0f), Vector2(250.0f, 250.0f), Vector2::Zero, 12, 0.1f);
 			playerAnimator->PlayAnimation(L"Idle",false);
 			playerAnimator->GetCompleteEvent(L"FrontGiveWater") = std::bind(&PlayerScript::AttackEffect, plScript);
-			mPlayer->GetComponent<Transform>()->SetPosition(Vector2(100.f, 100.f));
+			mPlayer->GetComponent<Transform>()->SetPosition(Vector2(300.f, 250.f));
 			//mPlayer->GetComponent<Transform>()->SetScale(Vector2(2.0f, 2.0f));
 
 
-			Cat* cat = object::Instantiate<Cat>(enums::eLayerType::Animal);
-			cat->AddComponent<CatScript>();
-			//cameraComp->SetTarget(cat);
-			graphcis::Texture* catTex = Resources::Find<graphcis::Texture>(L"Cat");
-			Animator* CatAnimator = cat->AddComponent < Animator>();
-			//CatAnimator->CreateAnimation(L"DownWalk", catTex, Vector2(0.0f, 0.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-			//CatAnimator->CreateAnimation(L"RightWalk", catTex, Vector2(0.0f, 32.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-			//CatAnimator->CreateAnimation(L"UpWalk", catTex, Vector2(0.0f, 64.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-			//CatAnimator->CreateAnimation(L"LeftWalk", catTex, Vector2(0.0f, 96.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-			//CatAnimator->CreateAnimation(L"SitDown", catTex, Vector2(0.0f, 128.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-			//CatAnimator->CreateAnimation(L"Grooming", catTex, Vector2(0.0f, 160.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-			//CatAnimator->CreateAnimation(L"LayDown", catTex, Vector2(0.0f, 192.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+			//Cat* cat = object::Instantiate<Cat>(enums::eLayerType::Animal);
+			//cat->AddComponent<CatScript>();
+			////cameraComp->SetTarget(cat);
+			//graphcis::Texture* catTex = Resources::Find<graphcis::Texture>(L"Cat");
+			//Animator* CatAnimator = cat->AddComponent < Animator>();
+			////CatAnimator->CreateAnimation(L"DownWalk", catTex, Vector2(0.0f, 0.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+			////CatAnimator->CreateAnimation(L"RightWalk", catTex, Vector2(0.0f, 32.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+			////CatAnimator->CreateAnimation(L"UpWalk", catTex, Vector2(0.0f, 64.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+			////CatAnimator->CreateAnimation(L"LeftWalk", catTex, Vector2(0.0f, 96.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+			////CatAnimator->CreateAnimation(L"SitDown", catTex, Vector2(0.0f, 128.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+			////CatAnimator->CreateAnimation(L"Grooming", catTex, Vector2(0.0f, 160.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+			////CatAnimator->CreateAnimation(L"LayDown", catTex, Vector2(0.0f, 192.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
 
-			//CatAnimator->PlayAnimation(L"SitDown", false);
-			CatAnimator->CreateAnimationByFolder(L"MushroomIdle", L"..\\Resource\\Mushroom", Vector2::Zero, 0.1f);
+			////CatAnimator->PlayAnimation(L"SitDown", false);
+			//CatAnimator->CreateAnimationByFolder(L"MushroomIdle", L"..\\Resource\\Mushroom", Vector2::Zero, 0.1f);
 
-			CatAnimator->PlayAnimation(L"MushroomIdle", true);
+			//CatAnimator->PlayAnimation(L"MushroomIdle", true);
 
-			cat->GetComponent<Transform>()->SetPosition(Vector2(200.0f, 200.0f));
-			cat->GetComponent<Transform>()->SetScale(Vector2(2.0f, 2.0f));
+			//cat->GetComponent<Transform>()->SetPosition(Vector2(200.0f, 200.0f));
+			//cat->GetComponent<Transform>()->SetScale(Vector2(1.0f, 1.0f));
 			Scene::Initialize();
 		}
 	}

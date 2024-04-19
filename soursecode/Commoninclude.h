@@ -10,7 +10,6 @@
 #include <functional>
 #include <filesystem>
 
-#include "meMath.h"
 
 #include <mmsystem.h>
 #include <dinput.h>
@@ -22,3 +21,4 @@
 #pragma comment(lib, "gdiplus.lib")
 
 #include "meEnums.h"
+#include "meMath.h"
