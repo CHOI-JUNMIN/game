@@ -2,6 +2,16 @@
 #include "meinput.h"
 #include "meTime.h"
 #include "meTransform.h"
+
+namespace me::object
+{
+	void Destory(Gameobject* gameobject)
+	{
+		if (gameobject != nullptr)
+			gameobject->death();
+	}
+}
+
 namespace me
 {
 	Gameobject::Gameobject()

@@ -56,6 +56,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)meCircleCollier2D.cpp">
       <Filter>Collider</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)meCollisionManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CHApplication.h" />
@@ -122,6 +123,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)meCircleCollier2D.h">
       <Filter>Collider</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)meCollisionManager.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Resourse">

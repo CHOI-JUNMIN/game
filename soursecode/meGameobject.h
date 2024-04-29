@@ -2,12 +2,18 @@
 #include "Commoninclude.h"
 #include "meComponent.h"
 
+
+namespace me::object
+{
+	void Destory(Gameobject* gameobject);
+}
+
 namespace me
 {
 	class Gameobject
 	{
 	public:
-
+		friend void object::Destory(Gameobject* obj);
 		enum class eState
 		{
 			Active,
@@ -46,17 +52,17 @@ namespace me
 			}
 			return component;
 		}
-		eState GetActive() { return mState; }
+		eState GetState() { return mState; }
 		void SetActive(bool power)
 		{
 			if (power == true) mState = eState::Active;
 			if (power == false) mState = eState::Paused;
 		}
-		void Death() { mState = eState::Dead; }
-
+		bool IsActive(){ return mState == eState::Active; }
+		bool IsDead(){ return mState == eState::Dead; }
 	private:
 		void initializeAddTransform();
-
+		void death() { mState = eState::Dead; }
 	private:
 		eState mState;
 		std::vector<Component*> mComponents;

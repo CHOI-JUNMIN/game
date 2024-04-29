@@ -18,11 +18,12 @@ namespace me :: enums
 	{
 		None,
 		BackGround,
+		Animal,
 		Player,
 		Particle,
-		Animal,
 		Max=16,
 	};
+
 	enum class eResourceType
 	{
 		Texture,

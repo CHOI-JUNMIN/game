@@ -35,9 +35,7 @@ namespace me
 		{
 			if (gameobj == nullptr)
 				continue;
-			Gameobject::eState state = gameobj->GetActive();
-			if (state == Gameobject::eState::Paused
-				|| state == Gameobject::eState::Dead)
+			if (gameobj->IsActive() == false)
 				continue;
 			gameobj->update();
 		}
@@ -49,9 +47,7 @@ namespace me
 		{
 			if (gameobj == nullptr)
 				continue;
-			Gameobject::eState state = gameobj->GetActive();
-			if (state == Gameobject::eState::Paused
-				|| state == Gameobject::eState::Dead)
+			if (gameobj->IsActive() == false)
 				continue;
 			gameobj->Lateupdate();
 		}
@@ -63,38 +59,43 @@ namespace me
 		{
 			if (gameobj == nullptr)
 				continue;
-			Gameobject::eState state = gameobj->GetActive();
-			if (state == Gameobject::eState::Paused
-				|| state == Gameobject::eState::Dead)
+			if (gameobj->IsActive() == false)
 				continue;
 			gameobj->Render(hdc);
 		}
 	}
 	void Layer::Destroy()
 	{
-		for (GameObjectIter iter = mGameobjects.begin()
-			; iter != mGameobjects.end()
-			; )
-		{
-			Gameobject::eState active = (*iter)->GetActive();
-			if (active == Gameobject::eState::Dead)
-			{
-				Gameobject* deathobj = (*iter);
-				iter = mGameobjects.erase(iter);
-
-				delete deathobj;
-				deathobj = nullptr;
-
-				continue;
-			}
-
-			iter++;
-		}
+		std::vector<Gameobject*> deletobjects = {};
+		findDeadGameobjects(deletobjects);
+		eraseGameobject();
+		deleteGameobjects(deletobjects);
 	}
 	void Layer::AddGameobject(Gameobject* gameobject)
 	{
 		if (gameobject == nullptr)
 			return;
 		mGameobjects.push_back(gameobject);
+	}
+	void Layer::findDeadGameobjects(OUT std::vector<Gameobject*>& gameobjs)
+	{
+		for (Gameobject* gameobj : mGameobjects)
+		{
+			Gameobject::eState active = gameobj->GetState();
+			if (active == Gameobject::eState::Dead)
+				gameobjs.push_back(gameobj);
+		}
+	}
+	void Layer::deleteGameobjects(std::vector<Gameobject*> deleteobjs)
+	{
+		for (Gameobject* obj : deleteobjs)
+		{
+			delete obj;
+			obj = nullptr;
+		}
+	}
+	void Layer::eraseGameobject()
+	{
+		std::erase_if(mGameobjects, [](Gameobject* gameobj) {return (gameobj)->IsDead(); });
 	}
 }

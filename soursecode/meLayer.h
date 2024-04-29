@@ -19,8 +19,13 @@ namespace me
 		virtual void Destroy();
 		void AddGameobject(Gameobject* gameobject);
 	
+		const std::vector<Gameobject*> GetGameobjects() { return mGameobjects; }
+
 	private:
-		//eLayerType mType;
+		void findDeadGameobjects(OUT std::vector<Gameobject*>& gameobjs);
+		void deleteGameobjects(std::vector<Gameobject*> gameobjs);
+		void eraseGameobject();
+	private:
 		std::vector<Gameobject*> mGameobjects;
 	};
 	typedef std::vector<Gameobject*>::iterator GameObjectIter;

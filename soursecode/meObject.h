@@ -33,9 +33,9 @@ namespace me::object
 
 		return gameObject;
 	}
-	static void Destory(Gameobject* obj)
-	{
-		obj->Death();
-	}
+	//static void Destory(Gameobject* obj)
+	//{
+	//	obj->Death();
+	//}
 
 }

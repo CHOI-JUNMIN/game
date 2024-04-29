@@ -3,6 +3,7 @@
 #include "meTime.h"
 #include "meSceneManager.h"
 #include "meResources.h"
+#include "meCollisionManager.h"
 namespace me
 {
 	Application::Application()
@@ -35,7 +36,7 @@ namespace me
 
 		Input::Initailize();
 		Time::Initailize();
-		
+		CollisionManager::Initialize();
 		SceneManager::Initialize();
 
 	}
@@ -50,10 +51,12 @@ namespace me
 	{
 		Input::Update();
 		Time::Update();
+		CollisionManager::Update();
 		SceneManager::update();
 	}
 	void Application::Lateupdate()
 	{
+		CollisionManager::Lateupdate();
 		SceneManager::Lateupdate();
 	}
 	void Application::Render()
@@ -62,6 +65,7 @@ namespace me
 		clearRenderTarget();
 
 		Time::Render(mBackHdc);
+		CollisionManager::Render(mBackHdc);
 		SceneManager::Render(mBackHdc);
 		copyRenderTarget(mBackHdc, mHdc);
 	}
