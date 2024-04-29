@@ -15,7 +15,7 @@ void me::Transform::Initialize()
 {
 }
 
-void me::Transform::update()
+void me::Transform::Update()
 {
 }
 

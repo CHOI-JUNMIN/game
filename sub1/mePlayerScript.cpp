@@ -21,7 +21,7 @@ namespace me
 	void PlayerScript::Initialize()
 	{
 	}
-	void PlayerScript::update()
+	void PlayerScript::Update()
 	{
 		if (mAnimator == nullptr)
 		{
@@ -72,7 +72,7 @@ namespace me
 
 		CatAnimator->PlayAnimation(L"SitDown", false);
 		Transform* tr = GetOwner()->GetComponent<Transform>();
-		cat->GetComponent<Transform>()->SetPosition(tr->Getposition());
+		cat->GetComponent<Transform>()->SetPosition(tr->GetPosition());
 		cat->GetComponent<Transform>()->SetScale(Vector2(2.0f, 2.0f));
 	}
 	void PlayerScript::idle()
@@ -96,16 +96,36 @@ namespace me
 
 			CatAnimator->PlayAnimation(L"SitDown", false);
 			Transform* tr = GetOwner()->GetComponent<Transform>();
-			cat->GetComponent<Transform>()->SetPosition(tr->Getposition());
+			cat->GetComponent<Transform>()->SetPosition(tr->GetPosition());
 			cat->GetComponent<Transform>()->SetScale(Vector2(2.0f, 2.0f));
 			Vector2 mousePos = Input::GetMousePosition();
 			catSrc->mDest = mousePos;
 		}
+		Transform* tr = GetOwner()->GetComponent<Transform>();
+		Vector2 pos = tr->GetPosition();
+
+		if (Input::GetKey(eKeyCode::D))
+		{
+			pos.x += 100.0f * Time::DeltaTime();
+		}
+		if (Input::GetKey(eKeyCode::A))
+		{
+			pos.x -= 100.0f * Time::DeltaTime();
+		}
+		if (Input::GetKey(eKeyCode::W))
+		{
+			pos.y -= 100.0f * Time::DeltaTime();
+		}
+		if (Input::GetKey(eKeyCode::S))
+		{
+			pos.y += 100.0f * Time::DeltaTime();
+		}
+		tr->SetPosition(pos);
 	}
 	void PlayerScript::move()
 	{
 		Transform* tr = GetOwner()->GetComponent<Transform>();
-		Vector2 pos = tr->Getposition();
+		Vector2 pos = tr->GetPosition();
 
 		if (Input::GetKey(eKeyCode::D))
 		{

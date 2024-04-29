@@ -47,6 +47,15 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)meAnimation.cpp">
       <Filter>Animation</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)meBoxCollider2D.cpp">
+      <Filter>Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)meCollider.cpp">
+      <Filter>Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)meCircleCollier2D.cpp">
+      <Filter>Collider</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CHApplication.h" />
@@ -104,6 +113,15 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)meAnimation.h">
       <Filter>Animation</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)meBoxCollider2D.h">
+      <Filter>Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)meCollider.h">
+      <Filter>Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)meCircleCollier2D.h">
+      <Filter>Collider</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Resourse">
@@ -123,6 +141,9 @@
     </Filter>
     <Filter Include="Animation">
       <UniqueIdentifier>{9396ea64-bb4d-4878-965a-42d7b2874b4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collider">
+      <UniqueIdentifier>{476752db-fa0b-4c73-879e-51611d369cab}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

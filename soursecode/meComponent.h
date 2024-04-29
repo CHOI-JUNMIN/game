@@ -11,7 +11,7 @@ namespace me
 		~Component();
 
 		virtual void Initialize();
-		virtual void update();
+		virtual void Update();
 		virtual void Lateupdate();
 		virtual void Render(HDC hdc);
 

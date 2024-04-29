@@ -16,7 +16,7 @@ namespace me
 	{
 	}
 
-	void me::Script::update()
+	void me::Script::Update()
 	{
 	}
 

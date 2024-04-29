@@ -24,7 +24,7 @@ namespace me
 	{
 	}
 
-	void SpriteRenderer::update()
+	void SpriteRenderer::Update()
 	{
 	}
 
@@ -38,7 +38,7 @@ namespace me
 			assert(false);
 
 		Transform* tr = GetOwner()->GetComponent<Transform>();
-		Vector2 pos = tr->Getposition();
+		Vector2 pos = tr->GetPosition();
 		float rot = tr->GetRotation();
 		Vector2 scale = tr->GetScale();
 		pos = renderer::mainCamera->CaluatePosition(pos);

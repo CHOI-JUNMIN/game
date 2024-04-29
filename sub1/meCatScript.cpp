@@ -22,7 +22,7 @@ namespace me
 	void CatScript::Initialize()
 	{
 	}
-	void CatScript::update()
+	void CatScript::Update()
 	{
 		mDeathTime += Time::DeltaTime();
 		if (mDeathTime > 6.0f)
@@ -67,19 +67,19 @@ namespace me
 		{
 			//object::Destory(GetOwner());
 		}
-		Transform* tr = GetOwner()->GetComponent<Transform>();
-		Vector2 pos = tr->Getposition();
+		//Transform* tr = GetOwner()->GetComponent<Transform>();
+		//Vector2 pos = tr->Getposition();
 
-		Transform* plTr = mPlayer->GetComponent<Transform>();
-		Vector2 dest = mDest - plTr->Getposition();
-		dest.normalize();
+		//Transform* plTr = mPlayer->GetComponent<Transform>();
+		//Vector2 dest = mDest - plTr->Getposition();
+		//dest.normalize();
 
-		float rotDegree = Vector2::Dot(dest, Vector2::Right);
-		rotDegree = acosf(rotDegree);
-		rotDegree = ConvertDegree(rotDegree);
-		pos += dest * (100.f * Time::DeltaTime());
+		//float rotDegree = Vector2::Dot(dest, Vector2::Right);
+		//rotDegree = acosf(rotDegree);
+		//rotDegree = ConvertDegree(rotDegree);
+		//pos += dest * (100.f * Time::DeltaTime());
 
-		tr->SetPosition(pos);
+		//tr->SetPosition(pos);
 	}
 	void CatScript::move()
 	{
@@ -128,7 +128,7 @@ namespace me
 	}
 	void CatScript::translate(Transform* tr)
 	{
-		Vector2 pos = tr->Getposition();
+		Vector2 pos = tr->GetPosition();
 		switch (mDirection)
 		{
 		case me::CatScript::eDirection::Left:

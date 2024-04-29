@@ -16,9 +16,12 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)meAnimation.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)meAnimator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)meBoxCollider2D.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)meCamera.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CHApplication.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Commoninclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)meCircleCollier2D.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)meCollider.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)meComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)meEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)meEnums.h" />
@@ -41,8 +44,11 @@
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)meAnimation.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)meAnimator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)meBoxCollider2D.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)meCamera.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CHApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)meCircleCollier2D.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)meCollider.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)meComponent.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)meEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)meGameobject.cpp" />

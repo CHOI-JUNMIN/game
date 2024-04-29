@@ -36,7 +36,7 @@ namespace me
 		{
 			if (comp == nullptr)
 				continue;
-			comp->update();
+			comp->Update();
 		}
 	}
 	void Gameobject::Lateupdate()

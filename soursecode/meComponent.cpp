@@ -14,7 +14,7 @@ namespace me
 	void Component::Initialize()
 	{
 	}
-	void Component::update()
+	void Component::Update()
 	{
 	}
 	void Component::Lateupdate()

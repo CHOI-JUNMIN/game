@@ -24,17 +24,17 @@ namespace me
 		mResolution.x = application.GetWidth();
 		mResolution.y = application.GetHeight();
 	}
-	void Camera::update()
+	void Camera::Update()
 	{
 		if (mTarget)
 		{
 			Transform* tr = mTarget->GetComponent<Transform>();
-			mLookPosition = tr->Getposition();
+			mLookPosition = tr->GetPosition();
 		}
 		else
 		{
 			Transform* cameraTr = GetOwner()->GetComponent<Transform>();
-			mLookPosition = cameraTr->Getposition();
+			mLookPosition = cameraTr->GetPosition();
 		}
 		mDistance = mLookPosition - (mResolution / 2.0f);
 	}

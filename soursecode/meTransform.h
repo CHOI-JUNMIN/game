@@ -13,12 +13,12 @@ namespace me {
 		~Transform();
 
 		void Initialize() override;
-		void update() override;
+		void Update() override;
 		void Lateupdate() override;
 		void Render(HDC hdc) override;
 
 		void SetPosition(Vector2 pos) { mPosition.x = pos.x; mPosition.y = pos.y; }
-		Vector2 Getposition() { return mPosition; }
+		Vector2 GetPosition() { return mPosition; }
 		float GetRotation() { return mRotation; }
 		Vector2 GetScale() { return mScale; }
 		void SetRotation(float rotate) { mRotation = rotate; }

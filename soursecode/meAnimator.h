@@ -30,7 +30,7 @@ namespace me
 		~Animator();
 
 		void Initialize() override;
-		void update() override;
+		void Update() override;
 		void Lateupdate() override;
 		void Render(HDC hdc) override;
 			

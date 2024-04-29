@@ -26,7 +26,7 @@ namespace me
 	void Animator::Initialize()
 	{
 	}
-	void Animator::update()
+	void Animator::Update()
 	{
 		if (mActiveAnimation)
 		{

@@ -51,7 +51,7 @@ namespace me
 
 		Gameobject* gameobj = mAnimator->GetOwner();
 		Transform* tr = gameobj->GetComponent<Transform>();
-		Vector2 pos = tr->Getposition();
+		Vector2 pos = tr->GetPosition();
 		float rot = tr->GetRotation();
 		Vector2 scale = tr->GetScale();
 		if (renderer::mainCamera)
@@ -98,6 +98,7 @@ namespace me
 					, sprite.size.y
 					, RGB(255, 0, 255));
 			}
+			Rectangle(hdc, pos.x, pos.y, pos.x + 10, pos.y + 10);
 		}
 
 		else if (type == graphcis::Texture::eTextureType::Png)
