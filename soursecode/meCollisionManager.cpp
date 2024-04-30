@@ -64,7 +64,7 @@ namespace me
 			if (leftCol == nullptr)
 				continue;
 			for (Gameobject* right : rights)
-			{ 
+			{
 				if (right->IsActive() == false)
 					continue;
 				Collider* rightCol = right->GetComponent<Collider>();
@@ -108,7 +108,7 @@ namespace me
 				iter->second = false;
 			}
 		}
-		else 
+		else
 		{
 			if (iter->second == true) //충돌중이였으나 이제는 충돌이 아닌상태
 			{
@@ -130,11 +130,33 @@ namespace me
 		Vector2 leftSize = left->Getsize() * 100.0f;
 		Vector2 rightSize = right->Getsize() * 100.0f;
 
-		if (fabs(leftPos.x - rightPos.x) < fabs(leftSize.x / 2.0f + rightSize.x / 2.0f) 
-			&& fabs(leftPos.y - rightPos.y) < fabs(leftSize.y / 2.0f + rightSize.y / 2.0f))
+		enums::eColliderType leftType = left->GetColliderType();
+		enums::eColliderType rightType = right->GetColliderType();
+
+		if (leftType == enums::eColliderType::Rect2D && rightType == enums::eColliderType::Rect2D)
 		{
-			return true;
+			if (fabs(leftPos.x - rightPos.x) < fabs(leftSize.x / 2.0f + rightSize.x / 2.0f)
+				&& fabs(leftPos.y - rightPos.y) < fabs(leftSize.y / 2.0f + rightSize.y / 2.0f))
+			{
+				return true;
+			}
 		}
+		if (leftType == enums::eColliderType::Circle2D && rightType == enums::eColliderType::Circle2D)
+		{
+			Vector2 leftCirclePos = leftPos + (leftSize / 2.0f);
+			Vector2 rightCirclePos = rightPos + (rightSize / 2.0f);
+			float distance = (leftCirclePos - rightCirclePos).length();
+			if (distance <= (leftSize.x / 2.0f + rightSize.x / 2.0f))
+			{
+				return true;
+			}
+		}
+
+		//if ((leftType == enums::eColliderType::Circle2D && rightType == enums::eColliderType::Rect2D)
+		//	|| leftType == enums::eColliderType::Rect2D && rightType == enums::eColliderType::Circle2D))
+		//	{
+
+		//	}
 		return false;
 	}
 }

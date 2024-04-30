@@ -57,6 +57,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)meinput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)meLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)meMath.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)meObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)meRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)meResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)meResources.cpp" />

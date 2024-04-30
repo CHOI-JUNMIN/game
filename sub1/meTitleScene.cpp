@@ -34,3 +34,13 @@ void me::TitleScene::Render(HDC hdc)
 {
 	Scene::Render(hdc);
 }
+
+void me::TitleScene::OnEnter()
+{
+	Scene::OnEnter();
+}
+
+void me::TitleScene::OnExit()
+{
+	Scene::OnExit();
+}

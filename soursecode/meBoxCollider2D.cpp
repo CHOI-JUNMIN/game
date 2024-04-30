@@ -1,11 +1,13 @@
 #include "meBoxCollider2D.h"
 #include "meTransform.h"
 #include "meGameobject.h"
+#include "meRenderer.h"
+#include "meCamera.h"
 
 namespace me
 {
 	BoxCollier2D::BoxCollier2D()
-		: Collider()
+		: Collider(enums::eColliderType::Rect2D)
 	{
 	}
 
@@ -29,6 +31,9 @@ namespace me
 	{
 		Transform* tr = GetOwner()->GetComponent<Transform>();
 		Vector2 pos = tr->GetPosition();
+
+		if (renderer::mainCamera)
+			pos = renderer::mainCamera->CaluatePosition(pos);
 
 		Vector2 offset = GetOffset();
 

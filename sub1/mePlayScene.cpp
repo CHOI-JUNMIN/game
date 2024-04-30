@@ -16,6 +16,7 @@
 #include "meCat.h"
 #include "meCatScript.h"
 #include "meBoxCollider2D.h"
+#include "meCircleCollier2D.h"
 #include "meCollisionManager.h"
 namespace me
 {
@@ -33,9 +34,10 @@ namespace me
 		Camera* cameraComp = camera->AddComponent<Camera>();
 		renderer::mainCamera = cameraComp;
 
-		mPlayer = object::Instantiate<Player>(enums::eLayerType::Particle);
+		mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
 		PlayerScript* plScript = mPlayer->AddComponent<PlayerScript>();
-		BoxCollier2D* collider = mPlayer->AddComponent<BoxCollier2D>();
+		//BoxCollier2D* collider = mPlayer->AddComponent<BoxCollier2D>();
+		CircleCollier2D* collider = mPlayer->AddComponent<CircleCollier2D>();
 		collider->SetOffset(Vector2(-50.0f, -50.0f));
 
 
@@ -54,7 +56,7 @@ namespace me
 		//cameraComp->SetTarget(cat);
 		graphcis::Texture* catTex = Resources::Find<graphcis::Texture>(L"Cat");
 		Animator* CatAnimator = cat->AddComponent < Animator>();
-		BoxCollier2D* boxCatCollider = cat->AddComponent<BoxCollier2D>();
+		CircleCollier2D* boxCatCollider = cat->AddComponent<CircleCollier2D>();
 		boxCatCollider->SetOffset(Vector2(-50.0f, -50.0f));
 
 		////CatAnimator->CreateAnimation(L"DownWalk", catTex, Vector2(0.0f, 0.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
@@ -95,10 +97,10 @@ namespace me
 	}
 	void PlayScene::OnEnter()
 	{
+		Scene::OnEnter();
 	}
 	void PlayScene::OnExit()
 	{
-		//Transform* tr = bg->GetComponent<Transform>();
-		//tr->SetPosition(Vector2(0, 0));
+		Scene::OnExit();
 	}
 }

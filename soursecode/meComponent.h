@@ -3,6 +3,8 @@
 
 namespace me
 {
+	using namespace enums;
+
 	class Gameobject;
 	class Component : public Entity
 	{

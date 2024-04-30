@@ -57,6 +57,9 @@
       <Filter>Collider</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)meCollisionManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)meObject.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CHApplication.h" />
@@ -105,9 +108,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)meEnums.h">
       <Filter>onlyheader</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)meObject.h">
-      <Filter>onlyheader</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)meAnimator.h">
       <Filter>Animation</Filter>
     </ClInclude>
@@ -124,6 +124,9 @@
       <Filter>Collider</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)meCollisionManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)meObject.h">
+      <Filter>common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Resourse">
