@@ -8,6 +8,7 @@
 #include "meCatScript.h"
 #include "meObject.h"
 #include "meResources.h"
+#include "meCollider.h"
 namespace me
 {
 	PlayerScript::PlayerScript()
@@ -74,6 +75,15 @@ namespace me
 		Transform* tr = GetOwner()->GetComponent<Transform>();
 		cat->GetComponent<Transform>()->SetPosition(tr->GetPosition());
 		cat->GetComponent<Transform>()->SetScale(Vector2(2.0f, 2.0f));
+	}
+	void PlayerScript::OnCollisionEnter(Collider* other)
+	{
+	}
+	void PlayerScript::OnCollisionStay(Collider* other)
+	{
+	}
+	void PlayerScript::OnCollisionExit(Collider* other)
+	{
 	}
 	void PlayerScript::idle()
 	{

@@ -39,7 +39,7 @@ namespace me
 		HPEN oldPen = (HPEN)SelectObject(hdc, greenPen);
 
 
-		Rectangle(hdc, pos.x+ offset.x, pos.y+ offset.y, pos.x + offset.x+ 100, pos.y + offset .y+ 100);
+		Rectangle(hdc, pos.x+ offset.x, pos.y+ offset.y, pos.x + offset.x+ 100* Getsize().x, pos.y + offset.y + 100*Getsize().y);
 
 		SelectObject(hdc, oldBrush);
 		SelectObject(hdc, oldPen);
