@@ -1,4 +1,5 @@
 #include "meScene.h"
+
 namespace me
 {
 	Scene::Scene()
@@ -23,7 +24,7 @@ namespace me
 			layer->Initialize();
 		}
 	}
-	void Scene::update()
+	void Scene::Update()
 	{
 		for (Layer* layer : mLayers)
 		{
@@ -64,6 +65,12 @@ namespace me
 	{
 		mLayers[(UINT)type]->AddGameobject(gameobj);
 	}
+	void Scene::EraseGameobject(Gameobject* gameobj)
+	{
+		eLayerType layerType = gameobj->GetLayerType();
+		mLayers[(UINT)layerType]->EraseGameobject(gameobj);
+	}
+
 	void Scene::CreateLayers()
 	{
 		mLayers.resize((UINT)enums::eLayerType::Max);

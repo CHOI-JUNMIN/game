@@ -35,6 +35,7 @@ namespace me
 		renderer::mainCamera = cameraComp;
 
 		mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
+		object::DontDestroyOnLoad(mPlayer);
 		PlayerScript* plScript = mPlayer->AddComponent<PlayerScript>();
 		//BoxCollier2D* collider = mPlayer->AddComponent<BoxCollier2D>();
 		CircleCollier2D* collider = mPlayer->AddComponent<CircleCollier2D>();
@@ -76,9 +77,9 @@ namespace me
 		cat->GetComponent<Transform>()->SetScale(Vector2(1.0f, 1.0f));
 		Scene::Initialize();
 	}
-	void PlayScene::update()
+	void PlayScene::Update()
 	{
-		Scene::update();
+		Scene::Update();
 	}
 	void PlayScene::Lateupdate()
 	{

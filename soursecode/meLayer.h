@@ -17,6 +17,7 @@ namespace me
 		virtual void Lateupdate();
 		virtual void Render(HDC hdc);
 		virtual void Destroy();
+		void EraseGameobject(Gameobject* erasegameobj);
 		void AddGameobject(Gameobject* gameobject);
 	
 		const std::vector<Gameobject*> GetGameobjects() { return mGameobjects; }
@@ -24,7 +25,7 @@ namespace me
 	private:
 		void findDeadGameobjects(OUT std::vector<Gameobject*>& gameobjs);
 		void deleteGameobjects(std::vector<Gameobject*> gameobjs);
-		void eraseGameobject();
+		void eraseDeadGameobject();
 	private:
 		std::vector<Gameobject*> mGameobjects;
 	};

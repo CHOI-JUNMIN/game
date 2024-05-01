@@ -1,15 +1,12 @@
 #pragma once
-#include "..//soursecode/meScene.h"
-
+#include "meScene.h"
 namespace me
 {
-	class TitleScene : public Scene
+	class DontDestroyOnLoad : public Scene
 	{
 	public:
-		TitleScene();
-		~TitleScene();
-
-
+		DontDestroyOnLoad();
+		~DontDestroyOnLoad();
 		void Initialize() override;
 		void Update() override;
 		void Lateupdate() override;
@@ -20,5 +17,6 @@ namespace me
 
 	private:
 	};
-
 }
+
+

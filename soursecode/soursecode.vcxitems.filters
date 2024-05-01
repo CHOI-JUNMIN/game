@@ -60,6 +60,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)meObject.cpp">
       <Filter>common</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)meDontDestroyOnLoad.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CHApplication.h" />
@@ -127,6 +128,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)meObject.h">
       <Filter>common</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)meDontDestroyOnLoad.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Resourse">

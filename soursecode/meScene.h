@@ -10,7 +10,7 @@ namespace me
 		Scene();
 		~Scene();
 		virtual void Initialize();
-		virtual void update();
+		virtual void Update();
 		virtual void Lateupdate();
 		virtual void Render(HDC hdc);
 		virtual void Destroy();
@@ -18,6 +18,7 @@ namespace me
 		virtual void OnExit();
 
 		void AddGameobject(Gameobject* gameobj, const enums::eLayerType type);
+		void EraseGameobject(Gameobject* gameobj);
 		Layer* GetLayer(const enums::eLayerType type) { return mLayers[(UINT)type]; }
 
 	private:

@@ -1,10 +1,11 @@
 #include "meSceneManager.h"
-
+#include "meDontDestroyOnLoad.h"
 
 namespace me {
 
 	std::map<std::wstring, Scene*> SceneManager::mScene = {};
 	Scene* SceneManager::mActiveScene = nullptr;
+	Scene* SceneManager::mDontDestroyOnLoad = nullptr;
 	Scene* SceneManager::LoadScene(const std::wstring& name)
 	{
 		if (mActiveScene)
@@ -22,26 +23,30 @@ namespace me {
 
 	void SceneManager::Initialize()
 	{
-
+		mDontDestroyOnLoad= CreateScene<DontDestroyOnLoad>(L"DontDestroyOnLoad");
 	}
 
 	void SceneManager::update()
 	{
-		mActiveScene->update();
+		mActiveScene->Update();
+		mDontDestroyOnLoad->Update();
 	}
 
 	void SceneManager::Lateupdate()
 	{
 		mActiveScene->Lateupdate();
+		mDontDestroyOnLoad->Lateupdate();
 	}
 
 	void SceneManager::Render(HDC hdc)
 	{
 		mActiveScene->Render(hdc);
+		mDontDestroyOnLoad->Render(hdc);
 	}
 	void SceneManager::Destroy()
 	{
 		mActiveScene->Destroy();
+		mDontDestroyOnLoad->Destroy();
 	}
 	void SceneManager::Release()
 	{

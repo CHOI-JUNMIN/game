@@ -16,6 +16,7 @@ namespace me
 {
 	Gameobject::Gameobject()
 		: mState(eState::Active)
+		, mLayerType(eLayerType::None)
 	{
 		mComponents.resize((UINT)enums::eComponentType::End);
 		initializeAddTransform();

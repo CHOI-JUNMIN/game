@@ -24,6 +24,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)meCollider.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)meCollisionManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)meComponent.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)meDontDestroyOnLoad.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)meEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)meEnums.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)meGameobject.h" />
@@ -52,6 +53,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)meCollider.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)meCollisionManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)meComponent.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)meDontDestroyOnLoad.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)meEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)meGameobject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)meinput.cpp" />

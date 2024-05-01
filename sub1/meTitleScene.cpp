@@ -16,9 +16,9 @@ void me::TitleScene::Initialize()
 	Scene::Initialize();
 }
 
-void me::TitleScene::update()
+void me::TitleScene::Update()
 {
-	Scene::update();
+	Scene::Update();
 }
 
 void me::TitleScene::Lateupdate()

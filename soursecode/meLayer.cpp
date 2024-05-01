@@ -68,8 +68,12 @@ namespace me
 	{
 		std::vector<Gameobject*> deletobjects = {};
 		findDeadGameobjects(deletobjects);
-		eraseGameobject();
+		eraseDeadGameobject();
 		deleteGameobjects(deletobjects);
+	}
+	void Layer::EraseGameobject(Gameobject* erasegameobj)
+	{
+		std::erase_if(mGameobjects, [=](Gameobject* gameobj) {return gameobj == erasegameobj; });
 	}
 	void Layer::AddGameobject(Gameobject* gameobject)
 	{
@@ -94,7 +98,7 @@ namespace me
 			obj = nullptr;
 		}
 	}
-	void Layer::eraseGameobject()
+	void Layer::eraseDeadGameobject()
 	{
 		std::erase_if(mGameobjects, [](Gameobject* gameobj) {return (gameobj)->IsDead(); });
 	}
