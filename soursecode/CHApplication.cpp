@@ -42,17 +42,17 @@ namespace me
 	}
 	void Application::Run()
 	{
-		update();
+		Update();
 		Lateupdate();
 		Render();
 		Destroy();
 	}
-	void Application::update()
+	void Application::Update()
 	{
 		Input::Update();
 		Time::Update();
 		CollisionManager::Update();
-		SceneManager::update();
+		SceneManager::Update();
 	}
 	void Application::Lateupdate()
 	{

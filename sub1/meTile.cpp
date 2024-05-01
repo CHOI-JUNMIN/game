@@ -2,24 +2,25 @@
 #include "meinput.h"
 #include "meTransform.h"
 #include "meTime.h"
+#include "meTile.h"
 namespace me
 {
-	void Player::Initialize()
+	void Tile::Initialize()
 	{
 		Gameobject::Initialize();
 	}
 
-	void Player::Update()
+	void Tile::Update()
 	{
 		Gameobject::Update();
 	}
 
-	void Player::Lateupdate()
+	void Tile::Lateupdate()
 	{
 		Gameobject::Lateupdate();
 	}
 
-	void Player::Render(HDC hdc)
+	void Tile::Render(HDC hdc)
 	{
 		Gameobject::Render(hdc);
 	}

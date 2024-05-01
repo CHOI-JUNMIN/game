@@ -1,6 +1,6 @@
 #pragma once
 #include "meResource.h"
-namespace me::graphcis
+namespace me::graphics
 {
 	class Texture : public Resource
 	{

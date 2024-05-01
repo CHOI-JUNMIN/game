@@ -4,7 +4,7 @@
 //해당 전역변수가 존재함을 알리는 키워드 
 extern me::Application application;
 
-namespace me::graphcis
+namespace me::graphics
 {
 	Texture* Texture::Create(const std::wstring& name, UINT width, UINT height)
 	{

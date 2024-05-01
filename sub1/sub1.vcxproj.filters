@@ -35,6 +35,10 @@
     <ClInclude Include="meCat.h">
       <Filter>player</Filter>
     </ClInclude>
+    <ClInclude Include="meToolScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="meTile.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mePlayer.cpp">
@@ -55,6 +59,10 @@
     <ClCompile Include="meCat.cpp">
       <Filter>player</Filter>
     </ClCompile>
+    <ClCompile Include="meToolScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="meTile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="sub1.rc" />

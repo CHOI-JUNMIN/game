@@ -10,7 +10,7 @@ namespace me
 		
 		void Initialize(HWND hwnd, UINT width, UINT height);
 		void Run();
-		void update();
+		void Update();
 		void Lateupdate();
 		void Render();
 		void Destroy();

@@ -26,7 +26,7 @@ namespace me {
 		mDontDestroyOnLoad= CreateScene<DontDestroyOnLoad>(L"DontDestroyOnLoad");
 	}
 
-	void SceneManager::update()
+	void SceneManager::Update()
 	{
 		mActiveScene->Update();
 		mDontDestroyOnLoad->Update();

@@ -30,7 +30,7 @@ namespace me
 		{
 			if (layer == nullptr)
 				continue;
-			layer->update();
+			layer->Update();
 		}
 	}
 	void Scene::Lateupdate()

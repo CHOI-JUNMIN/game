@@ -40,6 +40,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)meScript.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)meSpriteRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)meTexture.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)meTilemapRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)meTime.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)meTransform.h" />
   </ItemGroup>
@@ -68,6 +69,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)meScript.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)meSpriteRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)meTexture.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)meTilemapRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)meTime.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)meTransform.cpp" />
   </ItemGroup>

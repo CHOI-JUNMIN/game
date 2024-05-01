@@ -22,7 +22,7 @@ namespace me
 		static Scene* GetActiveScene() { return mActiveScene; }
 		static Scene* GetDontDestroyOnLoad() { return mDontDestroyOnLoad; }
 		static void Initialize();
-		static void update();
+		static void Update();
 		static void Lateupdate();
 		static void Render(HDC hdc);
 		static void Destroy();

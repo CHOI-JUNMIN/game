@@ -41,7 +41,7 @@ namespace me
 			comp->Initialize();
 		}
 	}
-	void Gameobject::update()
+	void Gameobject::Update()
 	{
 		for (Component* comp : mComponents)
 		{

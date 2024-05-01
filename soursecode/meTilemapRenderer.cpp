@@ -1,4 +1,4 @@
-#include "meSpriteRenderer.h"
+#include "meTilemapRenderer.h"
 #include "meGameobject.h"
 #include "meTransform.h"
 #include "meTexture.h"
@@ -8,31 +8,33 @@ namespace me
 {
 
 
-	SpriteRenderer::SpriteRenderer()
+	TilemapRenderer::TilemapRenderer()
 		:Component(enums::eComponentType::SpriteRenderer)
 		, mTexture(nullptr)
-		, mSize(Vector2::One)
+		, mSize(3.0f,3.0f)
+		, mIndex(8,7)
+		, mTileSize(16.0f,16.0f)
 	{
 
 	}
 
-	SpriteRenderer::~SpriteRenderer()
+	TilemapRenderer::~TilemapRenderer()
 	{
 	}
 
-	void SpriteRenderer::Initialize()
+	void TilemapRenderer::Initialize()
 	{
 	}
 
-	void SpriteRenderer::Update()
+	void TilemapRenderer::Update()
 	{
 	}
 
-	void SpriteRenderer::Lateupdate()
+	void TilemapRenderer::Lateupdate()
 	{
 	}
 
-	void SpriteRenderer::Render(HDC hdc)
+	void TilemapRenderer::Render(HDC hdc)
 	{
 		if (mTexture == nullptr)
 			assert(false);
@@ -56,13 +58,12 @@ namespace me
 
 				AlphaBlend(hdc, pos.x, pos.y
 					, mTexture->GetWidth() * mSize.x * scale.x, mTexture->GetHeight() * mSize.y * scale.y
-					, mTexture->GetHdc(), 0, 0, mTexture->GetWidth(), mTexture->GetHeight()
+					, mTexture->GetHdc(), mIndex.x * mTileSize.x, mIndex.y * mTileSize.y, mTexture->GetWidth(), mTexture->GetHeight()
 					, func);
 			}
-
 			TransparentBlt(hdc, pos.x, pos.y
-				, mTexture->GetWidth() * mSize.x * scale.x, mTexture->GetHeight() * mSize.y * scale.y
-				, mTexture->GetHdc(), 0, 0, mTexture->GetWidth(), mTexture->GetHeight()
+				, mTileSize.x * mSize.x * scale.x, mTileSize.y * mSize.y * scale.y
+				, mTexture->GetHdc(), mIndex.x*mTileSize.x, mIndex.y*mTileSize.y, mTileSize.x, mTileSize.y
 				, RGB(255, 0, 255));
 		}
 		else if (mTexture->GetTextureType() == graphics::Texture::eTextureType::Png)

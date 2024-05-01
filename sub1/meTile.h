@@ -3,7 +3,7 @@
 
 namespace me
 {
-	class Player : public Gameobject
+	class Tile : public Gameobject
 	{
 	public:
 
@@ -11,7 +11,8 @@ namespace me
 		void Update() override;
 		void Lateupdate() override;
 		void Render(HDC hdc) override;
-	
+
 	private:
 	};
 }
+

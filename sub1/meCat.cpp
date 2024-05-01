@@ -9,9 +9,9 @@ namespace me
 		Gameobject::Initialize();
 	}
 
-	void Cat::update()
+	void Cat::Update()
 	{
-		Gameobject::update();
+		Gameobject::Update();
 	}
 
 	void Cat::Lateupdate()

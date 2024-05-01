@@ -27,11 +27,11 @@ namespace me
 
 		HRESULT Load(const std::wstring& path) override;
 
-		void update();
+		void Update();
 		void Render(HDC hdc);
 
 		void CreateAnimation(const std::wstring& name
-			, graphcis::Texture* spriteSheet
+			, graphics::Texture* spriteSheet
 			, Vector2 leftTop
 			, Vector2 size
 			, Vector2 offset
@@ -43,7 +43,7 @@ namespace me
 
 	private:
 		class Animator* mAnimator;
-		graphcis::Texture* mTexture;
+		graphics::Texture* mTexture;
 
 		std::vector<Sprite> mAnimationSheet;
 		int mIndex;

@@ -61,7 +61,7 @@ namespace me
 
 		catSrc->SetPlayer(GetOwner());
 
-		graphcis::Texture* catTex = Resources::Find<graphcis::Texture>(L"Cat");
+		graphics::Texture* catTex = Resources::Find<graphics::Texture>(L"Cat");
 		Animator* CatAnimator = cat->AddComponent < Animator>();
 		CatAnimator->CreateAnimation(L"DownWalk", catTex, Vector2(0.0f, 0.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
 		CatAnimator->CreateAnimation(L"RightWalk", catTex, Vector2(0.0f, 32.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
@@ -95,7 +95,7 @@ namespace me
 
 			catSrc->SetPlayer(GetOwner());
 
-			graphcis::Texture* catTex = Resources::Find<graphcis::Texture>(L"Cat");
+			graphics::Texture* catTex = Resources::Find<graphics::Texture>(L"Cat");
 			Animator* CatAnimator = cat->AddComponent < Animator>();
 			CatAnimator->CreateAnimation(L"DownWalk", catTex, Vector2(0.0f, 0.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
 			CatAnimator->CreateAnimation(L"RightWalk", catTex, Vector2(0.0f, 32.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);

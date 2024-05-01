@@ -29,7 +29,7 @@ namespace me
 		}
 	}
 
-	void Layer::update()
+	void Layer::Update()
 	{
 		for (Gameobject* gameobj : mGameobjects)
 		{
@@ -37,7 +37,7 @@ namespace me
 				continue;
 			if (gameobj->IsActive() == false)
 				continue;
-			gameobj->update();
+			gameobj->Update();
 		}
 	}
 

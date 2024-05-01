@@ -26,6 +26,8 @@
     <ClInclude Include="mePlayer.h" />
     <ClInclude Include="mePlayerScript.h" />
     <ClInclude Include="mePlayScene.h" />
+    <ClInclude Include="meTile.h" />
+    <ClInclude Include="meToolScene.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="meTitleScene.h" />
   </ItemGroup>
@@ -35,7 +37,9 @@
     <ClCompile Include="mePlayer.cpp" />
     <ClCompile Include="mePlayerScript.cpp" />
     <ClCompile Include="mePlayScene.cpp" />
+    <ClCompile Include="meTile.cpp" />
     <ClCompile Include="meTitleScene.cpp" />
+    <ClCompile Include="meToolScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="sub1.rc" />

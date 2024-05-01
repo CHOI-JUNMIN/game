@@ -1,17 +1,24 @@
 #pragma once
-#include "..//soursecode/meGameobject.h"
-
+#include "..//soursecode/meScene.h"
 namespace me
 {
-	class Player : public Gameobject
+	class ToolScene : public Scene
 	{
 	public:
-
+		ToolScene();
+		~ToolScene();
 		void Initialize() override;
 		void Update() override;
 		void Lateupdate() override;
 		void Render(HDC hdc) override;
-	
-	private:
+
+		void OnEnter() override;
+		void OnExit() override;
 	};
+
 }
+
+
+
+
+

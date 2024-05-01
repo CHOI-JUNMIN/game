@@ -6,7 +6,8 @@ namespace me
 {
 	void LoadResources()
 	{
-		Resources::Load<graphcis::Texture>(L"Player", L"..//Resource/Player.bmp");
-		Resources::Load<graphcis::Texture>(L"Cat", L"..//Resource/ChickenAlpha.bmp");
+		Resources::Load<graphics::Texture>(L"Player", L"..//Resource/Player.bmp");
+		Resources::Load<graphics::Texture>(L"Cat", L"..//Resource/ChickenAlpha.bmp");
+		Resources::Load<graphics::Texture>(L"SpringFloor", L"..//Resource/SpringFloor.bmp");
 	}
 }

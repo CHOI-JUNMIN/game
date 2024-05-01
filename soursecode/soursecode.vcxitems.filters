@@ -61,6 +61,7 @@
       <Filter>common</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)meDontDestroyOnLoad.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)meTilemapRenderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CHApplication.h" />
@@ -129,6 +130,7 @@
       <Filter>common</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)meDontDestroyOnLoad.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)meTilemapRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Resourse">

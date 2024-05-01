@@ -18,6 +18,7 @@ namespace me :: enums
 	{
 		None,
 		BackGround,
+		Tile,
 		Animal,
 		Player,
 		Particle,
